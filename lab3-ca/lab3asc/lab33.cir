@@ -1,0 +1,26 @@
+* --- Nguồn điện ---
+V5 N_E5 0 3.3V         ; Nguồn Ea = 3.3V
+V6 N_E6 0 5V           ; Nguồn Eb = 5V
+
+* --- Cấu hình POT4 (POTe = 4k) ---
+RPOT4_FIXED N_J19 0 4k ; POT4 cố định theo mã KIT
+
+* --- Cấu hình POT3 (POTc - Thay đổi giá trị tại đây) ---
+.param R_pot_c = 2.5k  ; Bạn chỉnh giá trị này (0 đến 5k) để đo
+RPOT3_VAR N_J15 0 {R_pot_c}
+
+* --- Jumpers (Dùng nguồn 0V để đo dòng hoặc nối mạch) ---
+VJMP6 N_J16 N_J15 0V   ; JMP6 - Điểm đo dòng chính (JMPd)
+VJMP7 N_J16 N_J18 0V   ; Giả sử JMP7 đóng
+VJMP8 N_J19 N_J20 0V   ; Giả sử JMP8 đóng
+VJMP9 N_J13 N_J14 0V   ; Giả sử JMP9 đóng
+
+* --- Các điện trở cố định trong mạch ---
+R5 N_J16 N_E6 4.7k
+R6 N_E6 N_J20 2k
+R7 N_J20 0 4.7k
+R8 N_E6 0 2k
+
+* --- Lệnh thực thi ---
+.op
+.end

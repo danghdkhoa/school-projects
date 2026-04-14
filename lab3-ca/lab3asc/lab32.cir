@@ -1,0 +1,20 @@
+* --- Nguồn điện ---
+V3 N_E3 0 3.3V        ; Nguồn E3 = 3.3V
+V4 N_E4 0 5V          ; Nguồn E4 = 5V
+
+* --- Điện trở cố định ---
+R3 N_E3 J7 10k        ; R3 nối từ E3 đến điểm J7
+R4 J7 0 33k           ; R4 nối từ J7 xuống Mass
+
+* --- Jumpers (Dùng nguồn 0V để đo dòng) ---
+VJMP4 J7 J8 0V        ; JMP4 (z=4) dùng để đo dòng điện
+VJMP5 J9 N_E4 0V      ; JMP5 đóng, nối POT2 vào nguồn E4
+
+* --- Biến trở POT2 (50k) ---
+* Chỉnh giá trị R_pot để xem kết quả tại các thời điểm khác nhau
+.param R_pot = 25k
+RPOT2 J8 J9 {R_pot}
+
+* --- Lệnh thực thi ---
+.op
+.end

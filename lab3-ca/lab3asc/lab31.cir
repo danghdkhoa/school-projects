@@ -1,0 +1,21 @@
+* --- Nguồn điện ---
+V1 N_E1 0 5V          ; Nguồn E1 = 5V
+V2 N_E2 0 3.3V        ; Nguồn E2 = 3.3V
+VX N_X  0 0V          ; Giả sử đầu X của POT1 nối Mass (0V)
+
+* --- Jumpers (Dùng nguồn 0V để đo dòng điện) ---
+VJMP1 N_E1 N_J2 0     ; JMP1 nối E1 vào chân dưới POT1
+VJMP2 N_Wiper N_J4 0  ; JMP2 nối Wiper vào mạch đo (Đo dòng tại đây)
+
+* --- Cấu hình POT1 tại 1 thời điểm ---
+.param k1=0.5         ; Thay đổi k1 từ 0 đến 1 (0.5 = 50%)
+RPOT_A N_X N_Wiper    {50k * (1 - k1 + 0.0001)}
+RPOT_B N_Wiper N_J2   {50k * (k1 + 0.0001)}
+
+* --- Các điện trở còn lại ---
+R1 N_J4 0 5.1k
+R2 N_J4 N_E2 2k
+
+* --- Lệnh thực thi ---
+.op
+.end
