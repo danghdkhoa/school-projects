@@ -1,0 +1,26 @@
+LTspice 26.0.1 for Windows
+Circuit: D:\Projects\school-projects\lab5-ca\52.net
+Start Time: Wed Apr 29 02:53:02 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+ERROR: Node n005 is floating and connected to current source I1
+
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.102 seconds.
+
+Files loaded:
+D:\Projects\school-projects\lab5-ca\52.net
+

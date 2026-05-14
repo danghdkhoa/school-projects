@@ -1,0 +1,26 @@
+LTspice 26.0.1 for Windows
+Circuit: D:\Projects\school-projects\lab5-ca\51.net
+Start Time: Wed Apr 29 01:19:19 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+WARNING: Node n006 is floating.
+
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.099 seconds.
+
+Files loaded:
+D:\Projects\school-projects\lab5-ca\51.net
+

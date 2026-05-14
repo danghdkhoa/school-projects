@@ -1,0 +1,16 @@
+lab 5.1
+
+VE3 N001 0 5
+R4 N001 N002 330
+
+R5 N002 N003 150
+VE4 N003 0 3.3
+
+VJMP3 N002 N004 0
+RPOT2 N004 N005 {5K * k1}
+VJMP4 N005 0 0
+
+.param k1=0.001
+.step param k1 0.001 5 0.5
+.op
+.end
